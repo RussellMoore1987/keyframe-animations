@@ -29,8 +29,8 @@ body {
 
 .main-container {
     position: relative;
-    height: 425px;
-    width: 425px;
+    height: 560px;
+    width: 560px;
     /* border: 1px solid #ffffff;  */
 }
 
@@ -52,7 +52,120 @@ body {
 }
 
 /* ============================================================= */
-/* corner-box  */
+/* blue-line-box */
+/* ============================================================= */
+
+.blue-line-box {
+    rotate: 45deg;
+}
+
+.blue-line-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.blue-line-container:nth-child(2) {
+    rotate: 90deg;
+}
+
+.blue-line-container div {
+    height: 2px;
+    width: 165px;
+}
+
+.blue-line-container div:nth-child(1) {
+    background-image: linear-gradient(to right, rgb(67 69 171 / 0%) , rgb(67 69 171));
+}
+
+.blue-line-container div:nth-child(2) {
+    background-image: linear-gradient(to left, rgb(67 69 171 / 0%) , rgb(67 69 171));
+}
+
+/* ============================================================= */
+/* cross-box */
+/* ============================================================= */
+
+.cross-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    width: 450px;
+    /* border: 1px solid #ffffff;  */
+}
+
+.cross-bar-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cross-bar-container:nth-child(2) {
+    rotate: 90deg;
+}
+
+.cross-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cross-container:nth-child(1) div:nth-child(1),
+.cross-container:nth-child(1) div:nth-child(2) {
+    background-image: linear-gradient(to right, rgb(19 32 69 / 20%) , rgb(23, 38, 79));
+}
+
+.cross-container:nth-child(1) div:nth-child(1) {
+    clip-path: polygon(0 0, 88% 0, 100% 100%, 0% 100%);
+}
+
+.cross-container:nth-child(1) div:nth-child(2) {
+    clip-path: polygon(0 0, 100% 0, 88% 100%, 0% 100%);
+}
+
+.cross-container:nth-child(2) div:nth-child(1),
+.cross-container:nth-child(2) div:nth-child(2) {
+    background-image: linear-gradient(to left, rgb(19 32 69 / 20%) , rgb(23, 38, 79));
+}
+
+.cross-container:nth-child(2) div:nth-child(1) {
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.cross-container:nth-child(2) div:nth-child(2) {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%);
+}
+
+.cross-container div:nth-child(1),
+.cross-container div:nth-child(2) {
+    margin: 5px 0;
+    height: 14px;
+    width: 117px;
+}
+
+.cross-container svg {
+    position: absolute;
+}
+
+.cross-container:nth-child(1) svg {
+    left: 0;
+}
+
+.cross-container:nth-child(2) svg {
+    right: 0;
+    rotate: 180deg;
+}
+
+/* ============================================================= */
+/* corner-box */
 /* ============================================================= */
 
 .corner-box {
