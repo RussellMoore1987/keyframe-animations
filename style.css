@@ -31,7 +31,7 @@ body {
     position: relative;
     height: 425px;
     width: 425px;
-    border: 1px solid #ffffff; 
+    /* border: 1px solid #ffffff;  */
 }
 
 .container {
@@ -46,6 +46,8 @@ body {
 .bg-glow {
     /* background: radial-gradient(rgba(87, 150, 252, 0.9) -95%, rgba(87, 150, 252, 0.0) 73%); */
     /* background: radial-gradient(rgba(87, 114, 252, 70%) -95%, rgba(87, 114, 252, 0.0) 73%); */
+    background: radial-gradient(rgba(87, 114, 252, 44%) 4%, rgba(87, 114, 252, 18%) 46%, rgba(87, 114, 252, 9%) 65%, rgba(87, 114, 252, 0.0) 83%);
+    background: radial-gradient(rgba(87, 114, 252, 70%) -130%, rgba(87, 114, 252, 0.0) 85%);
     background: radial-gradient(rgba(87, 114, 252, 70%) -130%, rgba(87, 114, 252, 0.0) 85%);
 }
 
@@ -181,6 +183,9 @@ body {
     position: relative; 
     background-color: var(--line-glow-color, #bed7ff);
     box-shadow: 0px 0px 28px 5px var(--line-shadow-color, #89b6ff);
+    box-shadow: 0 0 6px 0px #fff, 0px 0px 30px 6px #2782f2;
+    box-shadow: 0 0 6px 0px #fff, 0px 0px 20px 1px #2782f2;
+    box-shadow: 0 0 6px 0px #fff, 0px 0px 20px 4px #2782f2;
 }
 
 .inner-line-box-row div {
@@ -205,6 +210,9 @@ body {
     border-radius: 2px;
     background-color: var(--line-glow-color, #bed7ff);
     box-shadow: 0px 0px 28px 5px var(--line-shadow-color, #89b6ff);
+    box-shadow: 0 0 6px 0px #fff, 0px 0px 30px 6px #2782f2;
+    box-shadow: 0 0 6px 0px #fff, 0px 0px 20px 1px #2782f2;
+    box-shadow: 0 0 6px 0px #fff, 0px 0px 20px 4px #2782f2;
 }
 
 .inner-line-box-row div:nth-child(1)::before {
@@ -286,12 +294,24 @@ body {
     /* animation-duration: 4s; */
 }
 
-.dot-container.top {
+.dot-container2 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 30px;
+    width: 25px;
+}
+
+.dot-container.top,
+.dot-container2.top {
     top: 15px;
     left: 0;
 }
 
-.dot-container.bottom {
+.dot-container.bottom,
+.dot-container2.bottom {
     bottom: 15px;
     left: 0;
     rotate: 180deg;
@@ -312,6 +332,21 @@ body {
     box-shadow: inset 0 0 50px #fff, 0 0 5px 1px #fff, 0px 0px 1px 0px #f5ff84, 0px 0px 20px 4px #2782f2;
     box-shadow: inset 0 0 50px #fff, 0 0 5px 1px #fff, 0px 0px 1px 0px #f5ff84, 0px 0px 30px 4px #2782f2;
     box-shadow: inset 0 0 50px #fff, 0 0 5px 1px #fff, 0px 0px 1px 0px #f5ff84, 0px 0px 30px 6px #2782f2;
+    box-shadow: 0 0 6px 0px #fff, 0px 0px 0px 0px #f5ff84, 0px 0px 30px 6px #2782f2;
+    box-shadow: 0 0 6px 0px #fff, 0px 0px 0px 0px #f5ff84, 0px 0px 20px 4px #2782f2;
+}
+
+.dot-container2 div{
+    margin: 0 2px;
+    height: 5.5px;
+    width: 5.5px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: inset 0 0 50px #fff, 0 0 5px 1px #fff, 0px 0px 1px 0px #f5ff84;
+    box-shadow: 0 0 3px 0px #fff, 0px 0px 10px 0px #f5ff84;
+    box-shadow: 0 0 3px 0px #fff, 0px 0px 5px 0px #f5ff84;
+    box-shadow: 0 0 3px 0px #fff, 0px 0px 20px 0px #f5ff84;
+    box-shadow: 0 0 3px 0px #fff, 0px 0px 0px 0px #f5ff84;
 }
 
 /* @keyframes example {
@@ -328,6 +363,14 @@ body {
 
 /* Temp code */
 img {
+    width: 578px;
+    position: absolute;
+    top: 183px;
+    right: 317px;
+}
+
+.img2 {
+    width: 300px;
     position: absolute;
     top: 0;
     right: 0;
