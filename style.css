@@ -41,7 +41,7 @@ body {
 }
 
 .bg-glow {
-    background: radial-gradient(rgba(87, 114, 252, 70%) -130%, rgba(87, 114, 252, 0.0) 85%);
+    background: radial-gradient(rgba(87, 114, 252, 70%) -130%, rgba(87, 114, 252, 0.0) 81%);
 }
 
 /* ============================================================= */
@@ -109,6 +109,12 @@ body {
     flex-direction: column;
 }
 
+.cross-container div {
+    margin: 5px 0;
+    height: 14px;
+    width: 117px;
+}
+
 .cross-container:nth-child(1) div:nth-child(1),
 .cross-container:nth-child(1) div:nth-child(2) {
     background-image: linear-gradient(to right, rgba(19, 32, 69, 0.2) , rgb(23, 38, 79));
@@ -135,15 +141,13 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%);
 }
 
-.cross-container div:nth-child(1),
-.cross-container div:nth-child(2) {
-    margin: 5px 0;
-    height: 14px;
-    width: 117px;
-}
-
-.cross-container svg {
+svg {
     position: absolute;
+    stroke:#d5b8ea;
+    stroke-width: 2;
+    height: 26.707px;
+    width: 27.217px;
+    fill: rgba(96,79,255,0.44);
 }
 
 .cross-container:nth-child(1) svg {
@@ -153,14 +157,6 @@ body {
 .cross-container:nth-child(2) svg {
     right: 0;
     rotate: 180deg;
-}
-
-svg {
-    stroke:#d5b8ea;
-    stroke-width: 2;
-    height: 26.707px;
-    width: 27.217px;
-    fill: rgba(96,79,255,0.44);
 }
 
 /* ============================================================= */
@@ -177,7 +173,7 @@ svg {
     position: absolute;
     height: 54px;
     width: 54px;  
-    border-color: var(--purple-corners-color, #E648F3);
+    border-color: var(--purple-corners-color);
     border-style: solid;
 }
 
@@ -188,7 +184,7 @@ svg {
     display: inline-block;
     height: 6px;
     width: 6px;
-    background-color: var(--purple-corners-color, #E648F3);
+    background-color: var(--purple-corners-color);
     rotate: 45deg;
 }
 
@@ -262,14 +258,12 @@ svg {
 
 .line-box {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     height: 165px;
     width: 165px;  
 }
 
-.inner-line-box-row {
+.inner-line-box-row, 
+.inner-line-box-col {
     position: absolute;
     display: flex;
     align-items: center;
@@ -280,23 +274,13 @@ svg {
 }
 
 .inner-line-box-col {
-    position: absolute;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    width: 100%;
-    rotate: 45deg;
 }
 
 .inner-line-box-row div,
 .inner-line-box-col div {
     position: relative; 
-    background-color: var(--line-glow-color, #bed7ff);
-    box-shadow: 0px 0px 28px 5px var(--line-shadow-color, #89b6ff);
-    box-shadow: 0 0 6px 0px #fff, 0px 0px 30px 6px #2782f2;
-    box-shadow: 0 0 6px 0px #fff, 0px 0px 20px 1px #2782f2;
+    background-color: var(--line-glow-color);
     box-shadow: 0 0 6px 0px #fff, 0px 0px 20px 4px #2782f2;
 }
 
@@ -310,20 +294,17 @@ svg {
     width: 55px;
 }
 
-.inner-line-box-row div::after,
 .inner-line-box-row div::before,
-.inner-line-box-col div::after,
-.inner-line-box-col div::before {
+.inner-line-box-row div::after,
+.inner-line-box-col div::before,
+.inner-line-box-col div::after {
     content: '';
     position: absolute;
     display: inline-block;
     height: 6px;
     width: 6px;
     border-radius: 2px;
-    background-color: var(--line-glow-color, #bed7ff);
-    box-shadow: 0px 0px 28px 5px var(--line-shadow-color, #89b6ff);
-    box-shadow: 0 0 6px 0px #fff, 0px 0px 30px 6px #2782f2;
-    box-shadow: 0 0 6px 0px #fff, 0px 0px 20px 1px #2782f2;
+    background-color: var(--line-glow-color);
     box-shadow: 0 0 6px 0px #fff, 0px 0px 20px 4px #2782f2;
 }
 
@@ -373,18 +354,17 @@ svg {
 
 .dot-box {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 75px;
     width: 75px;
-    /* border: 1px solid #ffffff; */
 }
 
 .dot-chanel {
     position: absolute;
-    top: 0;
-    left: calc(50% - 13px);
     height: 100%;
     width: 25px;
-    /* border: 1px solid #ffffff; */
 }
 
 .dot-chanel:nth-child(2) {
@@ -392,20 +372,10 @@ svg {
 }
 
 .dot-container {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    height: 30px;
-    width: 25px;
-    background: radial-gradient(rgba(87, 114, 252, 70%) -130%, rgba(87, 114, 252, 0.0) 85%);
     background: radial-gradient(rgba(87, 114, 252, 25%) -130%, rgba(87, 114, 252, 0.0) 85%);
-    /* border: 1px solid #ffffff; */
-    /* animation-name: example; */
-    /* animation-duration: 4s; */
 }
 
+.dot-container,
 .dot-container2 {
     position: absolute;
     display: flex;
@@ -435,17 +405,7 @@ svg {
     width: 5.5px;
     border-radius: 50%;
     background-color: #fff;
-    box-shadow: 0px 0px 16px 3px var(--dot-shadow-color, #89b6ff);
-    box-shadow: inset 0 0 50px #fff, 0px 0px 16px 3px var(--dot-shadow-color, #89b6ff);
-    box-shadow: inset 0px 0px 3px 0px #f1ffc1, 0px 0px 16px 3px #4288f9;
-    box-shadow: inset 0 0 50px #fff, 0 0 4px 1px #fff, 0 0 11px 0px #f5ff84, 0px 0px 16px 3px #4288f9;
-    box-shadow: inset 0 0 50px #fff, 0 0 5px 1px #fff, 0 0 0px 0px #f5ff84, 0px 0px 16px 3px #4288f9;
-    box-shadow: inset 0 0 50px #fff, 0 0 5px 1px #fff, 0 0 0px 0px #f5ff84, 0px 0px 20px 4px #2782f2;
-    box-shadow: inset 0 0 50px #fff, 0 0 5px 1px #fff, 0px 0px 1px 0px #f5ff84, 0px 0px 20px 4px #2782f2;
-    box-shadow: inset 0 0 50px #fff, 0 0 5px 1px #fff, 0px 0px 1px 0px #f5ff84, 0px 0px 30px 4px #2782f2;
-    box-shadow: inset 0 0 50px #fff, 0 0 5px 1px #fff, 0px 0px 1px 0px #f5ff84, 0px 0px 30px 6px #2782f2;
-    box-shadow: 0 0 6px 0px #fff, 0px 0px 0px 0px #f5ff84, 0px 0px 30px 6px #2782f2;
-    box-shadow: 0 0 6px 0px #fff, 0px 0px 0px 0px #f5ff84, 0px 0px 20px 4px #2782f2;
+    box-shadow: 0 0 6px 0px #fff, 0px 0px 20px 4px #2782f2;
 }
 
 .dot-container2 div{
@@ -454,24 +414,9 @@ svg {
     width: 5.5px;
     border-radius: 50%;
     background-color: #fff;
-    box-shadow: inset 0 0 50px #fff, 0 0 5px 1px #fff, 0px 0px 1px 0px #f5ff84;
-    box-shadow: 0 0 3px 0px #fff, 0px 0px 10px 0px #f5ff84;
-    box-shadow: 0 0 3px 0px #fff, 0px 0px 5px 0px #f5ff84;
-    box-shadow: 0 0 3px 0px #fff, 0px 0px 20px 0px #f5ff84;
-    box-shadow: 0 0 3px 0px #fff, 0px 0px 0px 0px #f5ff84;
+    /* box-shadow: 0 0 3px 0px #fff, 0px 0px 10px 0px #f5ff84; */ /* TODO: keep this one for reference */
+    box-shadow: 0 0 3px 0px #fff;
 }
-
-/* @keyframes example {
-    0%   {top:0px;}
-    50%  {top:45px;}
-    100% {top:0px;}
-} */
-
-
-
-
-
-
 
 /* TODO: Temp code remove */
 img {
