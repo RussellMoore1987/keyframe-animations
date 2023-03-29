@@ -159,6 +159,32 @@ svg {
     rotate: 180deg;
 }
 
+/* animations */
+.cross-container:nth-child(1) svg {
+    animation: cross-move-left 2s infinite ease-in-out;
+}
+
+@keyframes cross-move-left {
+    0%   {left: 0; rotate: 0deg;}
+    35%  {left: 90px; rotate: 0deg;}
+    50%  {left: 90px; rotate: 180deg;}
+    85%  {left: 0; rotate: 180deg;}
+    100% {left: 0; rotate: 0deg;}
+}
+
+.cross-container:nth-child(2) svg {
+    animation: cross-move-right 2s infinite ease-in-out;
+}
+
+/* The animation code */
+@keyframes cross-move-right {
+    0%   {right: 0; rotate: 180deg;}
+    35%  {right: 90px; rotate: 180deg;}
+    50%  {right: 90px; rotate: 360deg;}
+    85%  {right: 0; rotate: 360deg;}
+    100% {right: 0; rotate: 180deg;}
+}
+
 /* ============================================================= */
 /* corner-box */
 /* ============================================================= */
@@ -250,6 +276,20 @@ svg {
 .corner-box div:nth-child(4)::before {
     bottom: -3px;
     left: 0;
+}
+
+/* animations */
+.corner-box {
+    animation: corner-box 2s infinite ease-in-out;
+}
+
+@keyframes corner-box {
+    0%   {height: 165px; width: 165px;}
+    35%  {height: 275px; width: 275px;}
+    45%  {height: 250px; width: 250px;}
+    50%  {height: 275px; width: 275px;}
+    80%  {height: 165px; width: 165px;}
+    100%  {height: 165px; width: 165px;}
 }
 
 /* ============================================================= */
@@ -348,6 +388,21 @@ svg {
     bottom: -1.5px;
 }
 
+/* animations */
+.line-box {
+    animation: line-box 2s infinite ease-in-out;
+}
+
+@keyframes line-box {
+    0%   {rotate: 0deg; height: 165px; width: 165px;}
+    35%  {height: 275px; width: 275px;}
+    45%  {height: 250px; width: 250px;}
+    50%  {rotate: 0deg; height: 275px; width: 275px;}
+    70%  {rotate: 90deg; height: 110px; width: 110px;}
+    85%  {rotate: 90deg; height: 165px; width: 165px;}
+    100%  {rotate: 90deg; height: 165px; width: 165px;}
+}
+
 /* ============================================================= */
 /* dot-box */
 /* ============================================================= */
@@ -416,6 +471,45 @@ svg {
     background-color: #fff;
     /* box-shadow: 0 0 3px 0px #fff, 0px 0px 10px 0px #f5ff84; */ /* TODO: keep this one for reference */
     box-shadow: 0 0 3px 0px #fff;
+}
+
+/* animations */
+.dot-container.top,
+.dot-container2.top {
+    animation: top-dot-moving 2s infinite ease-in-out;
+}
+
+@keyframes top-dot-moving {
+    0%   {top: 15px;}
+    25%   {top: 75px;}
+    50%   {top: 75px;}  
+    70%   {top: -15px;}  
+    85%   {top: 15px;}  
+    100%   {top: 15px;}  
+}
+
+.dot-container.bottom,
+.dot-container2.bottom {
+    animation: bottom-dot-moving 2s infinite ease-in-out;
+}
+
+@keyframes bottom-dot-moving {
+    0%   {bottom: 15px;}
+    25%   {bottom: 75px;}
+    50%   {bottom: 75px;} 
+    70%   {bottom: -15px;} 
+    85%   {bottom: 15px;}  
+    100%   {bottom: 15px;}  
+}
+
+.dot-box {
+    animation: dot-box 2s infinite ease-in-out; 
+}
+
+@keyframes dot-box {
+    0%   {rotate: 0deg;}
+    25%   {rotate: 180deg;}
+    100%   {rotate: 180deg;}  
 }
 
 /* TODO: Temp code remove */
