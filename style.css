@@ -285,8 +285,9 @@ svg {
 @keyframes corner-box {
     0%   {height: 165px; width: 165px;}
     30%  {height: 275px; width: 275px;}
-    40%  {height: 230px; width: 230px;}
+    40%  {height: 215px; width: 215px;}
     47%  {height: 275px; width: 275px;}
+    51%  {height: 275px; width: 275px;}
     80%  {height: 165px; width: 165px;}
     100%  {height: 165px; width: 165px;}
 }
@@ -395,8 +396,9 @@ svg {
 @keyframes line-box {
     0%   {rotate: 0deg; height: 165px; width: 165px;}
     30%  {height: 275px; width: 275px;}
-    40%  {height: 200px; width: 200px;}
+    40%  {height: 185px; width: 185px;}
     47%  {rotate: 0deg; height: 275px; width: 275px;}
+    51%  {rotate: 0deg; height: 275px; width: 275px;}
     70%  {rotate: 90deg; height: 110px; width: 110px;}
     83%  {rotate: 90deg; height: 165px; width: 165px;}
     100%  {rotate: 90deg; height: 165px; width: 165px;}
