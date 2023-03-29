@@ -176,7 +176,6 @@ svg {
     animation: cross-move-right 2s infinite ease-in-out;
 }
 
-/* The animation code */
 @keyframes cross-move-right {
     0%   {right: 0; rotate: 180deg;}
     35%  {right: 90px; rotate: 180deg;}
@@ -285,9 +284,9 @@ svg {
 
 @keyframes corner-box {
     0%   {height: 165px; width: 165px;}
-    35%  {height: 275px; width: 275px;}
-    45%  {height: 250px; width: 250px;}
-    50%  {height: 275px; width: 275px;}
+    30%  {height: 275px; width: 275px;}
+    40%  {height: 230px; width: 230px;}
+    47%  {height: 275px; width: 275px;}
     80%  {height: 165px; width: 165px;}
     100%  {height: 165px; width: 165px;}
 }
@@ -395,11 +394,11 @@ svg {
 
 @keyframes line-box {
     0%   {rotate: 0deg; height: 165px; width: 165px;}
-    35%  {height: 275px; width: 275px;}
-    45%  {height: 250px; width: 250px;}
-    50%  {rotate: 0deg; height: 275px; width: 275px;}
+    30%  {height: 275px; width: 275px;}
+    40%  {height: 200px; width: 200px;}
+    47%  {rotate: 0deg; height: 275px; width: 275px;}
     70%  {rotate: 90deg; height: 110px; width: 110px;}
-    85%  {rotate: 90deg; height: 165px; width: 165px;}
+    83%  {rotate: 90deg; height: 165px; width: 165px;}
     100%  {rotate: 90deg; height: 165px; width: 165px;}
 }
 
@@ -481,8 +480,8 @@ svg {
 
 @keyframes top-dot-moving {
     0%   {top: 15px;}
-    25%   {top: 75px;}
-    50%   {top: 75px;}  
+    25%   {top: 65px;}
+    50%   {top: 65px;}  
     70%   {top: -15px;}  
     85%   {top: 15px;}  
     100%   {top: 15px;}  
@@ -495,8 +494,8 @@ svg {
 
 @keyframes bottom-dot-moving {
     0%   {bottom: 15px;}
-    25%   {bottom: 75px;}
-    50%   {bottom: 75px;} 
+    25%   {bottom: 65px;}
+    50%   {bottom: 65px;} 
     70%   {bottom: -15px;} 
     85%   {bottom: 15px;}  
     100%   {bottom: 15px;}  
@@ -510,19 +509,4 @@ svg {
     0%   {rotate: 0deg;}
     25%   {rotate: 180deg;}
     100%   {rotate: 180deg;}  
-}
-
-/* TODO: Temp code remove */
-img {
-    width: 578px;
-    position: absolute;
-    top: 183px;
-    right: 317px;
-}
-
-.img2 {
-    width: 300px;
-    position: absolute;
-    top: 0;
-    right: 0;
 }
