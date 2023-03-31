@@ -167,8 +167,9 @@ svg {
 @keyframes cross-move-left {
     0%   {left: 0; rotate: 0deg;}
     35%  {left: 90px; rotate: 0deg;}
-    50%  {left: 90px; rotate: 180deg;}
-    85%  {left: 0; rotate: 180deg;}
+    40%  {left: 90px; rotate: 0deg;}
+    50%  {left: 90px; rotate: -180deg;}
+    85%  {left: 0; rotate: -180deg;}
     100% {left: 0; rotate: 0deg;}
 }
 
@@ -179,8 +180,9 @@ svg {
 @keyframes cross-move-right {
     0%   {right: 0; rotate: 180deg;}
     35%  {right: 90px; rotate: 180deg;}
-    50%  {right: 90px; rotate: 360deg;}
-    85%  {right: 0; rotate: 360deg;}
+    40%  {right: 90px; rotate: 180deg;}
+    50%  {right: 90px; rotate: 0deg;}
+    85%  {right: 0; rotate: 0deg;}
     100% {right: 0; rotate: 180deg;}
 }
 
@@ -284,12 +286,12 @@ svg {
 
 @keyframes corner-box {
     0%   {height: 165px; width: 165px;}
-    30%  {height: 275px; width: 275px;}
-    40%  {height: 215px; width: 215px;}
-    47%  {height: 275px; width: 275px;}
-    51%  {height: 275px; width: 275px;}
+    35%  {height: 275px; width: 275px;}
+    40%  {height: 225px; width: 225px;}
+    50%  {height: 275px; width: 275px;}
+    54%  {height: 275px; width: 275px;}
     80%  {height: 165px; width: 165px;}
-    100%  {height: 165px; width: 165px;}
+    100% {height: 165px; width: 165px;}
 }
 
 /* ============================================================= */
@@ -395,10 +397,10 @@ svg {
 
 @keyframes line-box {
     0%   {rotate: 0deg; height: 165px; width: 165px;}
-    30%  {height: 275px; width: 275px;}
-    40%  {height: 185px; width: 185px;}
-    47%  {rotate: 0deg; height: 275px; width: 275px;}
-    51%  {rotate: 0deg; height: 275px; width: 275px;}
+    35%  {height: 275px; width: 275px;}
+    40%  {height: 205px; width: 205px;}
+    50%  {rotate: 0deg; height: 275px; width: 275px;}
+    54%  {rotate: 0deg; height: 275px; width: 275px;}
     70%  {rotate: 90deg; height: 110px; width: 110px;}
     83%  {rotate: 90deg; height: 165px; width: 165px;}
     100%  {rotate: 90deg; height: 165px; width: 165px;}
