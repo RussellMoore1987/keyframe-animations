@@ -28,38 +28,36 @@ body {
 
 .fire {
     position: absolute;
-    bottom: 0;
+    bottom: -15%;
     rotate: 45deg;
     aspect-ratio: 1/1;
     width: 45%;
-    scale: 1;
-    /* #DB4311 */
-    /* #E6891F */
-    /* #E9A523 */
+    scale: 0;
+    transform: translateX(0);
     background-color: #eed429;
     border-radius: 4px;
 }
 
 .fire.left {
-    animation: fire-grow-left 2s infinite ease-in-out;
+    animation: fire-grow-left 1.7s infinite ease-in-out;
 }
 
 .fire.right {
-    animation: fire-grow-left 2s infinite ease-in-out;
+    animation: fire-grow-left 1.7s infinite ease-in-out;
 }
 
 @keyframes fire-grow-left {
-    0%   {bottom: 0; margin-right: -2px; scale: 0; background-color: #eed429;}
-    35%  {bottom: 15%; margin-right: 10px; scale: 1; background-color: #E9A523;}
-    50%  {bottom: 25%; margin-right: -3px; scale: .8; background-color: #E6891F;}
+    0%   {bottom: -15%; margin-right: -15px; scale: 0; background-color: #eed429;}
+    35%  {bottom: 15%; margin-right: 15px; scale: 1; background-color: #E9A523;}
+    65%  {bottom: 30%; margin-right: -15px; scale: .8; background-color: #E6891F;}
     100% {bottom: 100%; margin-right: 0; scale: 0; background-color: #DB4311;}
 }
 
 @keyframes fire-grow-right {
-    0%   {bottom: 0; margin-right: 2px; width: 1%; background-color: #eed429;}
-    35%  {bottom: 15%; margin-right: -10px; width: 45%; background-color: #E9A523;}
-    50%  {bottom: 25%; margin-right: 3px; width: 40%; background-color: #E6891F;}
-    100% {bottom: 100%; margin-right: 0; width: 1%; background-color: #DB4311;}
+    0%   {bottom: -15%; margin-left: 15px; scale: 0; background-color: #eed429;}
+    35%  {bottom: 15%; margin-left: -15px; scale: 1; background-color: #E9A523;}
+    65%  {bottom: 30%; margin-left: 15px; scale: .8; background-color: #E6891F;}
+    100% {bottom: 100%; margin-left: 0; scale: 0; background-color: #DB4311;}
 }
 
 .wood-pile {
