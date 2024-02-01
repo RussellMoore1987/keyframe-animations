@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0f1116;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.fire-pit-container {
+    position: relative;
+    aspect-ratio: 5/7;
+    width: 100px;
+    border: #000000 solid 1px;
+}
+
+.fire-container {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 78%;
+    border: #000000 solid 1px;
+}
+
+.fire {
+    position: absolute;
+    bottom: 0;
+    rotate: 45deg;
+    aspect-ratio: 1/1;
+    width: 45%;
+    scale: 1;
+    /* #DB4311 */
+    /* #E6891F */
+    /* #E9A523 */
+    background-color: #eed429;
+    border-radius: 4px;
+}
+
+.fire.left {
+    animation: fire-grow-left 2s infinite ease-in-out;
+}
+
+.fire.right {
+    animation: fire-grow-left 2s infinite ease-in-out;
+}
+
+@keyframes fire-grow-left {
+    0%   {bottom: 0; margin-right: -2px; scale: 0; background-color: #eed429;}
+    35%  {bottom: 15%; margin-right: 10px; scale: 1; background-color: #E9A523;}
+    50%  {bottom: 25%; margin-right: -3px; scale: .8; background-color: #E6891F;}
+    100% {bottom: 100%; margin-right: 0; scale: 0; background-color: #DB4311;}
+}
+
+@keyframes fire-grow-right {
+    0%   {bottom: 0; margin-right: 2px; width: 1%; background-color: #eed429;}
+    35%  {bottom: 15%; margin-right: -10px; width: 45%; background-color: #E9A523;}
+    50%  {bottom: 25%; margin-right: 3px; width: 40%; background-color: #E6891F;}
+    100% {bottom: 100%; margin-right: 0; width: 1%; background-color: #DB4311;}
+}
+
+.wood-pile {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 37%;
+    border: #000000 solid 1px;
+}
+
+.wood {
+    position: absolute;
+    width: 80%;
+    height: 40%;
+    background-color: #65382e;
+    border-radius: 5px;
+}
+
+.wood:nth-child(1) {
+    rotate: 20deg;
+    background-color: #572d25;
+}
+
+.wood:nth-child(2) {
+    rotate: -20deg;
+}
