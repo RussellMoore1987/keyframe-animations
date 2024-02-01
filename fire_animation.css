@@ -13,7 +13,7 @@ body {
     position: relative;
     aspect-ratio: 5/7;
     width: 100px;
-    border: #000000 solid 1px;
+    /* border: #000000 solid 1px; */
 }
 
 .fire-container {
@@ -23,7 +23,7 @@ body {
     justify-content: center;
     width: 100%;
     height: 78%;
-    border: #000000 solid 1px;
+    /* border: #000000 solid 1px; */
 }
 
 .fire {
@@ -31,7 +31,7 @@ body {
     bottom: -15%;
     rotate: 45deg;
     aspect-ratio: 1/1;
-    width: 45%;
+    width: 40%;
     scale: 0;
     transform: translateX(0);
     background-color: #eed429;
@@ -43,21 +43,21 @@ body {
 }
 
 .fire.right {
-    animation: fire-grow-left 1.7s infinite ease-in-out;
+    animation: fire-grow-right 1.7s infinite ease-in-out;
 }
 
 @keyframes fire-grow-left {
-    0%   {bottom: -15%; margin-right: -15px; scale: 0; background-color: #eed429;}
-    35%  {bottom: 15%; margin-right: 15px; scale: 1; background-color: #E9A523;}
-    65%  {bottom: 30%; margin-right: -15px; scale: .8; background-color: #E6891F;}
-    100% {bottom: 100%; margin-right: 0; scale: 0; background-color: #DB4311;}
+    0%   {bottom: -15%; transform: translateX(10px); scale: 0; background-color: #eed429;}
+    35%  {bottom: 11%; transform: translateX(-10px); scale: 1; background-color: #E9A523;}
+    65%  {bottom: 35%; transform: translateX(10px); scale: .8; background-color: #E6891F;}
+    100% {bottom: 100%; transform: translateX(0); scale: 0; background-color: #DB4311;}
 }
 
 @keyframes fire-grow-right {
-    0%   {bottom: -15%; margin-left: 15px; scale: 0; background-color: #eed429;}
-    35%  {bottom: 15%; margin-left: -15px; scale: 1; background-color: #E9A523;}
-    65%  {bottom: 30%; margin-left: 15px; scale: .8; background-color: #E6891F;}
-    100% {bottom: 100%; margin-left: 0; scale: 0; background-color: #DB4311;}
+    0%   {bottom: -15%; transform: translateX(-10px); scale: 0; background-color: #eed429;}
+    35%  {bottom: 11%; transform: translateX(8px); scale: 1; background-color: #E9A523;}
+    65%  {bottom: 35%; transform: translateX(-10px); scale: .8; background-color: #E6891F;}
+    100% {bottom: 100%; transform: translateX(0); scale: 0; background-color: #DB4311;}
 }
 
 .wood-pile {
@@ -68,7 +68,7 @@ body {
     align-items: center;
     width: 100%;
     height: 37%;
-    border: #000000 solid 1px;
+    /* border: #000000 solid 1px; */
 }
 
 .wood {
