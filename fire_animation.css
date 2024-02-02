@@ -38,11 +38,11 @@ body {
 }
 
 .fire.left {
-    animation: fire-grow-left 1.7s infinite ease-in-out;
+    animation: fire-grow-left 1.7s infinite linear;
 }
 
 .fire.right {
-    animation: fire-grow-right 1.7s infinite ease-in-out;
+    animation: fire-grow-right 1.7s infinite linear;
 }
 
 @keyframes fire-grow-left {
