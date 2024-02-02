@@ -33,16 +33,6 @@ body {
     transform-origin: center;
 }
 
-.fire {
-    position: absolute;
-    rotate: 45deg;
-    aspect-ratio: 1/1;
-    width: 100%;
-    scale: 0;
-    background-color: #eed429;
-    border-radius: 4px;
-}
-
 .fire-box.left {
     animation: fire-box-grow-left 1.6s infinite linear;
 }
@@ -52,6 +42,13 @@ body {
 }
 
 .fire {
+    position: absolute;
+    rotate: 45deg;
+    aspect-ratio: 1/1;
+    width: 100%;
+    scale: 0;
+    background-color: #eed429;
+    border-radius: 4px;
     animation: fire 1.6s infinite linear;
 }
 
