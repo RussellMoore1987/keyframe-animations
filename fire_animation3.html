@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Fire</title>
+    <!-- ? https://www.pinterest.com/pin/525091637812132527/ -->
+    <link rel="stylesheet" href="fire_animation2.css">
+</head>
+<body>
+    <div class="fire-pit-container">
+        <div class="fire-container"></div>
+        <div class="wood-pile">
+            <div class="wood"></div>
+            <div class="wood"></div>
+        </div>
+    </div>
+    <script>
+        const fireContainer = document.querySelector('.fire-container');
+        let fireBoxDirection = 'right';
+        setInterval(() => {
+            fireBoxDirection = fireBoxDirection === 'left' ? 'right' : 'left';
+            const fireBox = document.createElement('div');
+            fireBox.classList.add('fire-box');
+            fireBox.classList.add(fireBoxDirection);
+            const fire = document.createElement('div');
+            fire.classList.add('fire');
+            fireBox.appendChild(fire);
+            fireContainer.appendChild(fireBox);
+            setTimeout(() => {
+                fireBox.remove();
+            }, 1600);
+        }, 400);
+    </script>
+</body>
+</html>
