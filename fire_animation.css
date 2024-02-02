@@ -46,14 +46,14 @@ body {
 }
 
 @keyframes fire-grow-left {
-    0%   {bottom: -15%; transform: translateX(6px); scale: 0; background-color: #eed429;}
-    35%  {bottom: 5%; transform: translateX(-6px); scale: 1; background-color: #E9A523;}
+    0%   {bottom: -20%; transform: translateX(6px); scale: 0; background-color: #eed429;}
+    35%  {bottom: 5%; transform: translateX(-3px); scale: 1; background-color: #E9A523;}
     65%  {bottom: 25%; transform: translateX(6px); scale: .8; background-color: #E6891F;}
     100% {bottom: 100%; transform: translateX(0); scale: 0; background-color: #DB4311;}
 }
 
 @keyframes fire-grow-right {
-    0%   {bottom: -15%; transform: translateX(-6px); scale: 0; background-color: #eed429;}
+    0%   {bottom: -20%; transform: translateX(-6px); scale: 0; background-color: #eed429;}
     35%  {bottom: 5%; transform: translateX(3px); scale: 1; background-color: #E9A523;}
     65%  {bottom: 25%; transform: translateX(-6px); scale: .8; background-color: #E6891F;}
     100% {bottom: 100%; transform: translateX(0); scale: 0; background-color: #DB4311;}
